@@ -1,0 +1,5 @@
+#!/bin/sh
+
+rm -rf *~ */*~ src/*.o src/*.so \
+   src/crc32c/libcrc32c.a \
+   src/crc32c/build

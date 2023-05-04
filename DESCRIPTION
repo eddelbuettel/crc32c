@@ -1,0 +1,12 @@
+Package: crc32c
+Type: Package
+Title: Concise Summary of What the Package Does
+Version: 0.0.1
+Date: 2023-05-02
+Author: Dirk Eddelbuettel
+Maintainer: Dirk Eddelbuettel <edd@debian.org>
+Description: More about what it does (maybe more than one line).
+License: GPL (>= 2)
+LinkingTo: tidyCpp
+SystemRequirements: cmake
+Encoding: UTF-8

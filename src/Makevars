@@ -1,0 +1,20 @@
+
+XTRA_LIB = crc32c/libcrc32c.a
+
+PKG_LIBS = $(XTRA_LIB)
+
+PKG_CPPFLAGS = -Icrc32c/include
+
+.Phony: all
+
+all: $(XTRA_LIB) $(SHLIB)
+
+$(SHLIB): $(XTRA_LIB)
+
+$(XTRA_LIB):
+	mkdir crc32c/build && \
+		cd crc32c/build && \
+		cmake .. && \
+		make all && \
+		cp -v libcrc32c.a .. && \
+		rm -rf *
