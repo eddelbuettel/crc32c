@@ -14,11 +14,14 @@ uint32_t Crc32c(const char* data, size_t count);
 uint32_t Crc32c(const std::string& string);
 
 extern "C" SEXP c_crc32c(SEXP sx) {
-    std::string s(R::asCharacter(sx));
-    uint32_t val = crc32c::Crc32c(s);
-    char buf[9];
-    snprintf(buf, 9, "%08x", val);
-    R::Protect res(R::allocVectorCharacter(1));
-    R::setStringElement(res, 0, R::mkChar(buf));
+    R_xlen_t n = R::length(sx);
+    R::Protect res(R::allocVectorCharacter(n));
+    for (auto i = 0; i < n; i++) {
+        std::string s(R::asCharacter(R::stringElement(sx, i)));
+        uint32_t val = crc32c::Crc32c(s);
+        char buf[9];
+        snprintf(buf, 9, "%08x", val);
+        R::setStringElement(res, i, R::mkChar(buf));
+    }
     return res;
 }

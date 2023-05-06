@@ -1,6 +1,5 @@
 \name{crc32c-package}
 \alias{crc32c-package}
-\alias{crc32c}
 \docType{package}
 \title{\packageTitle{crc32c}}
 \description{\packageDescription{crc32c}}
