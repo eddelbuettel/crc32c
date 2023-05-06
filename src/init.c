@@ -24,15 +24,18 @@
 #include <Rconfig.h>
 #include <Rinternals.h>
 #include <R_ext/Rdynload.h>
+#include <stdint.h>             /* for uint8_t and uint32_t */
 
 /*  function declarations -- could be in external header file if used  */
 /*  by functions in anotherfile in this package                        */
 SEXP c_crc32c(SEXP sx);
+uint32_t c_crc32c_uint8(const uint8_t* data, size_t count);
+uint32_t c_crc32c_extend(uint32_t crc, const uint8_t* data, size_t count);
 
 /* definition of functions provided for .Call() 			*/
 static const R_CallMethodDef callMethods[] = {
-    { "c_crc32c",	(DL_FUNC) &c_crc32c,	1 },
-    { NULL,            	NULL,                   0 }
+    { "c_crc32c",	(DL_FUNC) &c_crc32c,		1 },
+    { NULL,            	NULL,                     	0 }
 };
 
 
@@ -40,8 +43,10 @@ static const R_CallMethodDef callMethods[] = {
 /* the functions we are exporting here					*/
 void R_init_crc32c(DllInfo *info) {
 
-    /* used by external packages linking to internal serialization code from C */
-    R_RegisterCCallable("RApiSerialize", "c_crc32c", (DL_FUNC) &c_crc32c);
+    /* used by external packages linking to crc32c function from C */
+    R_RegisterCCallable("crc32c", "c_crc32c",        (DL_FUNC) &c_crc32c);
+    R_RegisterCCallable("crc32c", "c_crc32c_uint8",  (DL_FUNC) &c_crc32c_uint8);
+    R_RegisterCCallable("crc32c", "c_crc32c_extend", (DL_FUNC) &c_crc32c_extend);
 
     R_registerRoutines(info,
                        NULL,		/* slot for .C */

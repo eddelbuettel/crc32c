@@ -49,9 +49,26 @@ extern "C" {
 /* in ../src/init.c via R_RegisterCCallable()		*/
 
 SEXP attribute_hidden c_crc32c(SEXP x) {
-    static SEXP(*fun)(SEXP) = (SEXP(*)(SEXP)) R_GetCCallable("crc32c", "c_crc32c");
+    static SEXP(*fun)(SEXP) = NULL;
+    if (fun == NULL) fun = (SEXP(*)(SEXP)) R_GetCCallable("crc32c", "c_crc32c");
     return fun(x);
 }
+
+uint32_t attribute_hidden c_crc32c_uint8(const uint8_t* data, size_t count) {
+    static uint32_t(*fun)(const uint8_t*, size_t) = NULL;
+    if (fun == NULL)
+        fun = (uint32_t(*)(const uint8_t*, size_t)) R_GetCCallable("crc32c", "c_crc32c_uint8");
+    return fun(data, count);
+}
+
+uint32_t attribute_hidden c_crc32c_extend(uint32_t crc, const uint8_t* data, size_t count) {
+    static uint32_t(*fun)(uint32_t, const uint8_t*, size_t) = NULL;
+    if (fun == NULL)
+        fun = (uint32_t(*)(uint32_t, const uint8_t*, size_t)) R_GetCCallable("crc32c", "c_crc32c_extend");
+    return fun(crc, data, count);
+}
+
+
 
 #ifdef __cplusplus
 }
