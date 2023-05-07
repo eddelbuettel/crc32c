@@ -14,18 +14,20 @@ CRC32C is a [cyclic redundancy check](https://en.wikipedia.org/wiki/Cyclic_redun
 parity) implementation based on work by [Castagnoli, Brauer, and
 Hermann](https://dx.doi.org/10.1109/26.231911) that is provided by Google in a
 [repository](https://github.com/google/crc32c) with optional hardware-acceleration selected at
-run-time.
+run-time. It is included (minus the parts for logging, testing and
+benchmarking we would not use from R) 'as is' in the package at [src/crc32c/](src/crc32c/).
 
 This project provides it for use by [R](https://www.r-project.org).  We also aim for this to be an
-example or even reference implementation of how a standalone `cmake` project can be offered as an R
-package.
+example of how a standalone `cmake` project providing a library can be offered via an R package for
+use by R as well as by other R packages.
 
 ### Usage
 
 The package provides a function direct callable from R.
 
-The package also exports three C-level functions that can be called directly
-from other R packages by means of a mechanism [described in _Writing R Extensions_](https://rstudio.github.io/r-manuals/r-exts/System-and-foreign-language-interfaces.html#linking-to-native-routines-in-other-packages).
+The package also exports three C-level functions that can be called directly from other R packages
+by means of a mechanism [described in _Writing R
+Extensions_](https://rstudio.github.io/r-manuals/r-exts/System-and-foreign-language-interfaces.html#linking-to-native-routines-in-other-packages).
 
 ### Authors
 
