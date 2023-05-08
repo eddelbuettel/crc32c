@@ -1,5 +1,7 @@
 2023-05-08  Dirk Eddelbuettel  <edd@debian.org>
 
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
 	* src/crc32c/CMakeLists.txt: Ensure static libraries are compiled
 	with position independent property set
 

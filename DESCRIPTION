@@ -1,8 +1,8 @@
 Package: crc32c
 Type: Package
 Title: Cyclic Redundancy Check with CPU-Specific Acceleration
-Version: 0.0.1
-Date: 2023-05-07
+Version: 0.0.1.1
+Date: 2023-05-08
 Authors@R: c(person(given = "Dirk", family = "Eddelbuettel",
                     role = c("aut", "cre"), email = "edd@debian.org", 
                     comment = c(ORCID = "0000-0001-6419-907X")),
@@ -14,7 +14,8 @@ Description: Hardware-based support for 'CRC32C' cyclic redundancy checksum func
   functionality is exported at the 'C'-language level for use by other packages.
   'CRC32C' is described in 'RFC 3270' at <https://datatracker.ietf.org/doc/html/rfc3720>
   and is based on 'Castagnoli et al' <doi:10.1109/26.231911>.
-URL: https://github.com/google/crc32c
+URL: https://github.com/google/crc32c, https://github.com/eddelbuettel/crc32c
+BugReports: https://github.com/eddelbuettel/crc32c/issues
 License: GPL (>= 2)
 LinkingTo: tidyCpp
 SystemRequirements: cmake
