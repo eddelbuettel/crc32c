@@ -1,5 +1,6 @@
 ## Modification for R package:
 ##  - enable STATIC library
+##  - ensire position independent code is turned on
 ##  - turn off tests
 ##  - turn off benchmarks
 
@@ -241,9 +242,9 @@ if(HAVE_ARM64_CRC32C)
 endif(HAVE_ARM64_CRC32C)
 
 # CMake only enables PIC by default in SHARED and MODULE targets.
-if(BUILD_SHARED_LIBS)
+#if(BUILD_SHARED_LIBS)
   set_property(TARGET crc32c_arm64 PROPERTY POSITION_INDEPENDENT_CODE TRUE)
-endif(BUILD_SHARED_LIBS)
+#endif(BUILD_SHARED_LIBS)
 
 # SSE4.2 code is built separately, so we don't accidentally compile unsupported
 # instructions into code that gets run without SSE4.2 support.
@@ -263,9 +264,9 @@ if(HAVE_SSE42)
 endif(HAVE_SSE42)
 
 # CMake only enables PIC by default in SHARED and MODULE targets.
-if(BUILD_SHARED_LIBS)
+#if(BUILD_SHARED_LIBS)
   set_property(TARGET crc32c_sse42 PROPERTY POSITION_INDEPENDENT_CODE TRUE)
-endif(BUILD_SHARED_LIBS)
+#endif(BUILD_SHARED_LIBS)
 
 # Must be included before CMAKE_INSTALL_INCLUDEDIR is used.
 include(GNUInstallDirs)
@@ -276,6 +277,7 @@ add_library(crc32c STATIC
   $<TARGET_OBJECTS:crc32c_arm64>
   $<TARGET_OBJECTS:crc32c_sse42>
 )
+set_property(TARGET crc32c PROPERTY POSITION_INDEPENDENT_CODE TRUE)
 target_sources(crc32c
   PRIVATE
     "${PROJECT_BINARY_DIR}/include/crc32c/crc32c_config.h"

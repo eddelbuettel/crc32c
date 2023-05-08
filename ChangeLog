@@ -1,5 +1,8 @@
 2023-05-08  Dirk Eddelbuettel  <edd@debian.org>
 
+	* src/crc32c/CMakeLists.txt: Ensure static libraries are compiled
+	with position independent property set
+
 	* README.md: Add CI, CRAN and Dependcies badges
 
 2023-05-07  Dirk Eddelbuettel  <edd@debian.org>
