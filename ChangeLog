@@ -1,3 +1,7 @@
+2023-05-08  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Add CI, CRAN and Dependcies badges
+
 2023-05-07  Dirk Eddelbuettel  <edd@debian.org>
 
 	* Initial release 0.0.1
