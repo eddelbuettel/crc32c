@@ -1,0 +1,16 @@
+2023-05-07  Dirk Eddelbuettel  <edd@debian.org>
+
+	* Initial release 0.0.1
+
+	* src/crc32c/: Include upstream version 1.1.2
+
+	* inst/include/crc32cAPI.h: Added API header
+	* src/init.c: Added corresponding initialization
+	* src/crc32c.cpp: Added minimal (vectorised) example
+	* R/crc32c.R: Added R caller of example
+	* man/crc32c.Rd: Added documentation
+	* tests/check.R: Added minimal checks
+
+        * DESCRIPTION: Generated via kitten() as R package
+        * NAMESPACE: Idem
+        * man/crc32c-package.Rd: Idem
