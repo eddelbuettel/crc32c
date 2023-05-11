@@ -1,4 +1,6 @@
 
+CMAKE = @cmake@
+
 XTRA_LIB = crc32c/libcrc32c.a
 
 PKG_LIBS = $(XTRA_LIB)
@@ -14,7 +16,7 @@ $(SHLIB): $(XTRA_LIB)
 $(XTRA_LIB):
 	mkdir crc32c/build && \
 		cd crc32c/build && \
-		cmake .. && \
-		make all && \
+		${CMAKE} .. && \
+		${MAKE} all && \
 		cp -v libcrc32c.a .. && \
 		rm -rf *

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+## With thanks to Reed A. Cartwright on r-package-devel on 2023-05-10
+## Also end of Writing R Extensions, Section 1.2.6 'Using `cmake`'
+
+if test -z "$CMAKE"; then
+   # Look for a cmake binary in the current path
+   CMAKE=`which cmake 2>/dev/null`
+fi
+if test -z "$CMAKE"; then
+   # Check for a MacOS specific path
+   CMAKE=`which /Applications/CMake.app/Contents/bin/cmake 2>/dev/null`
+fi
+if test -f "$CMAKE"; then
+   echo "** cmake is ${CMAKE}"
+else   
+   echo "The 'cmake' program is required but not found."
+   exit 1
+fi   
+
+sed -e "s|@cmake@|${CMAKE}|" src/Makevars.in > src/Makevars

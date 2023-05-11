@@ -1,3 +1,11 @@
+2023-05-10  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll micro version and date
+
+	* configure: Detect cmake even on the marvel that is macOS
+	* src/Makevars.in: Switched from Makevars, cmake filled in
+	* cleanup: Also remove (now generated) src/Makevars
+
 2023-05-08  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Roll micro version and date
