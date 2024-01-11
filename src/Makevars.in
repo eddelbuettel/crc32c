@@ -1,6 +1,9 @@
 
 CMAKE = @cmake@
 
+export CC = $(CC)
+export CXX = $(CXX)
+
 XTRA_LIB = crc32c/libcrc32c.a
 
 PKG_LIBS = $(XTRA_LIB)
