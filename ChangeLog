@@ -1,3 +1,7 @@
+2024-05-18  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Use tinyverse.netlify.app for dependency badge
+
 2024-01-11  Jeroen Ooms  <jeroenooms@gmail.com>
 
 	* src/Makevars.in: Export CC and CXX to support cross-compilation

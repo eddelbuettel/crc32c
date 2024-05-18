@@ -4,7 +4,7 @@
 [![CI](https://github.com/eddelbuettel/crc32c/workflows/ci/badge.svg)](https://github.com/eddelbuettel/crc32c/actions?query=workflow%3Aci)
 [![License](https://eddelbuettel.github.io/badges/GPL2+.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
 [![CRAN](https://www.r-pkg.org/badges/version/crc32c)](https://cran.r-project.org/package=crc32c)
-[![Dependencies](https://tinyverse.netlify.com/badge/crc32c)](https://cran.r-project.org/package=crc32c)
+[![Dependencies](https://tinyverse.netlify.app/badge/crc32c)](https://cran.r-project.org/package=crc32c)
 [![Last Commit](https://img.shields.io/github/last-commit/eddelbuettel/crc32c)](https://github.com/eddelbuettel/crc32c)
 
 ### Motivation
