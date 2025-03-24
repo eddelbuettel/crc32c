@@ -1,3 +1,8 @@
+2025-03-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/crc32c/CMakeLists.txt: Update minimum cmake version to 3.5 (and
+	up to 4.0) to permit build at CRAN under rc of cmake 4.0.0
+
 2024-12-17  Dirk Eddelbuettel  <edd@debian.org>
 
 	* .github/workflows/ci.yaml: Simplify to r-ci with included bootstrap
