@@ -1,8 +1,8 @@
 Package: crc32c
 Type: Package
 Title: Cyclic Redundancy Check with CPU-Specific Acceleration
-Version: 0.0.2
-Date: 2023-05-11
+Version: 0.0.3
+Date: 2025-03-25
 Authors@R: c(person(given = "Dirk", family = "Eddelbuettel",
                     role = c("aut", "cre"), email = "edd@debian.org", 
                     comment = c(ORCID = "0000-0001-6419-907X")),

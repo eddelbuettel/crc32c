@@ -3,10 +3,12 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/crc32c/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/crc32c/issues/#1}{##1}}
 
-\section{Changes in version 0.0.3 (unreleased)}{
+\section{Changes in version 0.0.3 (2025-03-25)}{
   \itemize{
     \item Support cross-compilation by setting CC and CXX in Makevars.in
     (Jeroen Ooms in \ghpr{1})
+    \item Support pre-release 4.0.0 of \code{cmake} by moving the minimum
+    stated version from 3.1 to 3.5 per CRAN request, also sent PR upstream
   }
 }
 
