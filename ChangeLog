@@ -1,3 +1,7 @@
+2025-09-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* README.md: Link to crc32c-example repository
+
 2025-04-29  Dirk Eddelbuettel  <edd@debian.org>
 
 	* src/crc32c/CMakeLists.txt: Correct separator in

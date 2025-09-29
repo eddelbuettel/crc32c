@@ -28,6 +28,9 @@ The package also exports three C-level functions that can be called directly fro
 by means of a mechanism [described in _Writing R
 Extensions_](https://rstudio.github.io/r-manuals/r-exts/System-and-foreign-language-interfaces.html#linking-to-native-routines-in-other-packages).
 
+The example package [crc32cExample](https://github.com/eddelbuettel/crc32c-example) demonstrates how
+to access these functions.
+
 ### Authors
 
 For CRC32C itself see the [included AUTHORS file](src/crc32c/AUTHORS) file.
