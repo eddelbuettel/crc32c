@@ -2,7 +2,11 @@
 CMAKE = @cmake@
 
 export CC = $(CC)
+export CFLAGS = $(CFLAGS) $(CPICFLAGS)
 export CXX = $(CXX)
+export CXXFLAGS = $(CXXFLAGS) $(CXXPICFLAGS) $(C_VISIBILITY)
+export AR = $(AR)
+export RANLIB = $(RANLIB)
 
 XTRA_LIB = crc32c/libcrc32c.a
 
